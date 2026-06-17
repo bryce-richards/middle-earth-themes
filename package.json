@@ -4,20 +4,36 @@
   "description": "Twenty-six color themes drawn from thirteen realms of Middle-earth, each in a dark and a light mode.",
   "version": "1.0.0",
   "publisher": "bryce",
+  "author": "Bryce Richards",
+  "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bryce-richards/middle-earth-themes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bryce-richards/middle-earth-themes/issues"
-  },
-  "homepage": "https://github.com/bryce-richards/middle-earth-themes#readme",
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark",
+    "light",
+    "middle-earth",
+    "tolkien",
+    "fantasy"
+  ],
+  "galleryBanner": {
+    "color": "#181d15",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brycerichards/middle-earth-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brycerichards/middle-earth-themes/issues"
+  },
+  "homepage": "https://github.com/brycerichards/middle-earth-themes#readme",
   "contributes": {
     "themes": [
       {

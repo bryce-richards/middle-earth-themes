@@ -46,6 +46,19 @@ This produces `middle-earth-themes-1.0.0.vsix`. Install it with:
 code --install-extension middle-earth-themes-1.0.0.vsix
 ```
 
+### Before publishing to the Marketplace
+
+Two values in `package.json` are placeholders to personalize first:
+
+- `publisher` — must exactly match the publisher ID you register on the
+  Visual Studio Marketplace (currently `bryce`).
+- `repository` / `bugs` / `homepage` — point these at your actual GitHub repo
+  (currently `github.com/brycerichards/middle-earth-themes`).
+
+The `LICENSE` (MIT), `icon.png`, and `CHANGELOG.md` are already in place. The
+`.vscodeignore` keeps `gen.py` and `preview-colors.json` out of the packaged
+`.vsix` while leaving them in the repo.
+
 ## Tweaking & extending
 
 Every theme lives in `themes/` as plain JSON: UI colors under `colors`, syntax

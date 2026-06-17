@@ -364,10 +364,24 @@ for key in order:
     preview[key] = {k: p[k] for k in ("bg","fg","gutter","comment","keyword","func","string","number",
                     "typ","prop","statusBg","statusFg","bgTab","error","file","slug")}
 
-pkg = {"name": "middle-earth-themes", "displayName": "Middle-earth Themes",
-       "description": "Twenty-six color themes drawn from thirteen realms of Middle-earth, each in a dark and a light mode.",
-       "version": "1.0.0", "publisher": "bryce", "engines": {"vscode": "^1.70.0"},
-       "categories": ["Themes"], "contributes": {"themes": contributes}}
+pkg = {
+    "name": "middle-earth-themes",
+    "displayName": "Middle-earth Themes",
+    "description": "Twenty-six color themes drawn from thirteen realms of Middle-earth, each in a dark and a light mode.",
+    "version": "1.0.0",
+    "publisher": "bryce",
+    "author": "Bryce Richards",
+    "license": "MIT",
+    "icon": "icon.png",
+    "engines": {"vscode": "^1.70.0"},
+    "categories": ["Themes"],
+    "keywords": ["theme", "color-theme", "dark", "light", "middle-earth", "tolkien", "fantasy"],
+    "galleryBanner": {"color": "#181d15", "theme": "dark"},
+    "repository": {"type": "git", "url": "https://github.com/brycerichards/middle-earth-themes.git"},
+    "bugs": {"url": "https://github.com/brycerichards/middle-earth-themes/issues"},
+    "homepage": "https://github.com/brycerichards/middle-earth-themes#readme",
+    "contributes": {"themes": contributes},
+}
 with open("/home/claude/middle-earth/package.json", "w") as f:
     json.dump(pkg, f, indent=2, ensure_ascii=False)
 with open("/home/claude/middle-earth/preview-colors.json", "w") as f:
