@@ -1,0 +1,155 @@
+{
+  "name": "middle-earth-themes",
+  "displayName": "Middle-earth Themes",
+  "description": "Twenty-six color themes drawn from thirteen realms of Middle-earth, each in a dark and a light mode.",
+  "version": "1.0.0",
+  "publisher": "bryce",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryce-richards/middle-earth-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bryce-richards/middle-earth-themes/issues"
+  },
+  "homepage": "https://github.com/bryce-richards/middle-earth-themes#readme",
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "The Shire (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shire-dark-color-theme.json"
+      },
+      {
+        "label": "The Shire (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/shire-light-color-theme.json"
+      },
+      {
+        "label": "The Grey Havens (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/grey-havens-dark-color-theme.json"
+      },
+      {
+        "label": "The Grey Havens (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/grey-havens-light-color-theme.json"
+      },
+      {
+        "label": "Rivendell (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rivendell-dark-color-theme.json"
+      },
+      {
+        "label": "Rivendell (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/rivendell-light-color-theme.json"
+      },
+      {
+        "label": "Moria (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/moria-dark-color-theme.json"
+      },
+      {
+        "label": "Moria (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/moria-light-color-theme.json"
+      },
+      {
+        "label": "Lothlórien (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lothlorien-dark-color-theme.json"
+      },
+      {
+        "label": "Lothlórien (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/lothlorien-light-color-theme.json"
+      },
+      {
+        "label": "Fangorn (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fangorn-dark-color-theme.json"
+      },
+      {
+        "label": "Fangorn (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/fangorn-light-color-theme.json"
+      },
+      {
+        "label": "Mirkwood (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mirkwood-dark-color-theme.json"
+      },
+      {
+        "label": "Mirkwood (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/mirkwood-light-color-theme.json"
+      },
+      {
+        "label": "Erebor (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/erebor-dark-color-theme.json"
+      },
+      {
+        "label": "Erebor (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/erebor-light-color-theme.json"
+      },
+      {
+        "label": "Rohan (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/rohan-dark-color-theme.json"
+      },
+      {
+        "label": "Rohan (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/rohan-light-color-theme.json"
+      },
+      {
+        "label": "Isengard (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/isengard-dark-color-theme.json"
+      },
+      {
+        "label": "Isengard (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/isengard-light-color-theme.json"
+      },
+      {
+        "label": "Minas Tirith (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/minas-tirith-dark-color-theme.json"
+      },
+      {
+        "label": "Minas Tirith (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/minas-tirith-light-color-theme.json"
+      },
+      {
+        "label": "Mordor (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mordor-dark-color-theme.json"
+      },
+      {
+        "label": "Mordor (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/mordor-light-color-theme.json"
+      },
+      {
+        "label": "Barad-dûr (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/barad-dur-dark-color-theme.json"
+      },
+      {
+        "label": "Barad-dûr — Ashlands (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/barad-dur-light-color-theme.json"
+      }
+    ]
+  }
+}
