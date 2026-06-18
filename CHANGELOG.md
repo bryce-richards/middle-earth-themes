@@ -1,10 +1,15 @@
 # Changelog
 
+## 1.0.2
+
+Rewrote the README/Marketplace listing for end users (install from the
+Marketplace rather than copying folders) and corrected the GitHub repository
+links. No theme color changes.
+
 ## 1.0.1
 
-Rewrote the README/Marketplace listing for end users, corrected the GitHub
-repository links, and added gallery metadata (banner, keywords, author,
-license). No theme color changes.
+Added gallery metadata — banner, keywords, author, and license — and set the
+Marketplace publisher. No theme color changes.
 
 ## 1.0.0
 
