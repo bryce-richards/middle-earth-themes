@@ -1,0 +1,49 @@
+name: Release
+
+# Push a version tag (e.g. v1.0.3) and this builds the .vsix, creates the
+# GitHub release with it attached, and publishes to the VS Code Marketplace —
+# all from the same commit, so GitHub and the Marketplace can never drift.
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write # needed to create the GitHub release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Fail fast if the git tag doesn't match the version in package.json.
+      - name: Verify tag matches package.json version
+        run: |
+          PKG_VERSION="$(node -p "require('./package.json').version")"
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $PKG_VERSION"
+            exit 1
+          fi
+
+      - name: Package extension
+        run: npx --yes @vscode/vsce package
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            ./*.vsix \
+            --title "Middle-earth Themes $GITHUB_REF_NAME" \
+            --notes "See [CHANGELOG.md](CHANGELOG.md). Install from the VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=brycerichards.middle-earth-themes"
+
+      - name: Publish to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: npx --yes @vscode/vsce publish
