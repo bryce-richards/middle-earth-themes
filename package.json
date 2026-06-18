@@ -28,12 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brycerichards/middle-earth-themes.git"
+    "url": "https://github.com/bryce-richards/middle-earth-themes.git"
   },
   "bugs": {
-    "url": "https://github.com/brycerichards/middle-earth-themes/issues"
+    "url": "https://github.com/bryce-richards/middle-earth-themes/issues"
   },
-  "homepage": "https://github.com/brycerichards/middle-earth-themes#readme",
+  "homepage": "https://github.com/bryce-richards/middle-earth-themes#readme",
   "contributes": {
     "themes": [
       {

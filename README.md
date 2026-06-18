@@ -1,7 +1,8 @@
 # Middle-earth Themes
 
 Twenty-six VS Code color themes drawn from thirteen realms of Middle-earth —
-each with a dark and a light mode.
+each with a dark and a light mode. From the cozy green of the Shire to the
+ember glow of Mordor, pick the realm that suits your mood.
 
 | Realm | Mood | Signature colors |
 |-------|------|------------------|
@@ -22,55 +23,42 @@ each with a dark and a light mode.
 Each theme styles the full workbench — editor, sidebar, tabs, terminal, git
 gutters, bracket pairs, status bar — plus TextMate and semantic syntax tokens.
 
-## Install (local, no marketplace needed)
+## Install
 
-1. Copy the entire `middle-earth` folder into your VS Code extensions directory:
-   - **macOS / Linux:** `~/.vscode/extensions/`
-   - **Windows:** `%USERPROFILE%\.vscode\extensions\`
-2. Fully quit and reopen VS Code.
-3. Command Palette (`Cmd/Ctrl + Shift + P`) → **Preferences: Color Theme** →
-   all twenty-six themes appear grouped together. Pick one.
+1. Open the **Extensions** view in VS Code (`Cmd/Ctrl + Shift + X`).
+2. Search for **Middle-earth Themes** and click **Install**.
+3. Open the theme picker with `Cmd/Ctrl + K` then `Cmd/Ctrl + T`
+   (or Command Palette → **Preferences: Color Theme**).
+4. All twenty-six themes appear grouped together — pick one.
 
-## Install (package as .vsix to share)
-
-From inside the `middle-earth` folder:
+Prefer the command line?
 
 ```bash
-npm install -g @vscode/vsce
-vsce package
+code --install-extension brycerichards.middle-earth-themes
 ```
 
-This produces `middle-earth-themes-1.0.0.vsix`. Install it with:
+## Switching themes
 
-```bash
-code --install-extension middle-earth-themes-1.0.0.vsix
-```
+Use `Cmd/Ctrl + K` `Cmd/Ctrl + T` at any time to preview themes — arrow through
+the list and the editor updates live, so you can wander from Rivendell to
+Mordor and back before committing.
 
-### Before publishing to the Marketplace
+## Feedback
 
-Two values in `package.json` are placeholders to personalize first:
+Found a color that feels off, or want a realm that isn't here yet? Open an
+issue at
+[github.com/bryce-richards/middle-earth-themes/issues](https://github.com/bryce-richards/middle-earth-themes/issues).
 
-- `publisher` — must exactly match the publisher ID you register on the
-  Visual Studio Marketplace (currently `bryce`).
-- `repository` / `bugs` / `homepage` — point these at your actual GitHub repo
-  (currently `github.com/brycerichards/middle-earth-themes`).
+## Contributing
 
-The `LICENSE` (MIT), `icon.png`, and `CHANGELOG.md` are already in place. The
-`.vscodeignore` keeps `gen.py` and `preview-colors.json` out of the packaged
-`.vsix` while leaving them in the repo.
+The themes are generated from `gen.py`; each lives in `themes/` as plain JSON
+(UI colors under `colors`, syntax under `tokenColors` / `semanticTokenColors`).
+To tweak a theme, edit a hex value and run **Developer: Reload Window**. To add
+a new realm, add a palette block and key to the `order` list in `gen.py` and
+rerun it — `package.json` and the preview data regenerate automatically. See
+the [repository](https://github.com/bryce-richards/middle-earth-themes) for
+details.
 
-## Tweaking & extending
+## License
 
-Every theme lives in `themes/` as plain JSON: UI colors under `colors`, syntax
-under `tokenColors` / `semanticTokenColors`. Edit a hex value, run
-**Developer: Reload Window**, and the change is live. **Developer: Inspect
-Editor Tokens and Scopes** shows the exact scope under your cursor.
-
-All themes are generated from `gen.py`. The original realms carry fully
-hand-tuned palettes; newer realms supply only the essential colors and the
-script derives the structural UI shades (panels, borders, selection, etc.) by
-blending. To add a fourteenth realm — Bree, Helm's Deep, the Dead Marshes —
-copy a palette block, give it the minimal keys (bg, fg, gutter, gutterActive,
-cursor, accent, statusBg/Fg, error/warning/info, and the syntax roles), add the
-key to the `order` list, and rerun the script. `package.json` and the preview
-data regenerate automatically.
+[MIT](LICENSE)
