@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+Added automated release pipeline (GitHub Actions): pushing a version tag now
+builds the `.vsix`, creates the GitHub release, and publishes to the
+Marketplace from one commit. No theme color changes.
+
 ## 1.0.2
 
 Rewrote the README/Marketplace listing for end users (install from the
